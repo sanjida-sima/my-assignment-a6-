@@ -1,11 +1,12 @@
 
+// 'use client'
+// // import Link from 'next/link';
+// import { useState } from "react"
+// import { useFitlog } from '../../components/providerss/FitlogProvider'
 
-const MyPlan = () => {
-    return (
-        <div>
-            <h3>this page is for my plan</h3>
-        </div>
-    );
-};
-
-export default MyPlan;
+// export default function MyPlanPage() {
+//     const{
+//         plan, saved, removeFromSaved,RemoveFromPlan
+//     } =useFitlog();
+// }
+ 

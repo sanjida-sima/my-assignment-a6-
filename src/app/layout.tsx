@@ -1,7 +1,7 @@
 
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
-import { FirlogProvider } from "../components/providerss/FitlogProvider";
+// import  FitlogProvider  from '../components/providerss/FitlogProvider';
 
 export default function RootLayout({ children }: 
   
