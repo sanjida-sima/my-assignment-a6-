@@ -13,9 +13,9 @@ const Hero = () => {
                 WORKOUT LIBRARY
               </h1>
 
-              <p className="text-4xl md:text-6xl font-black uppercase leading-tight text-white">
-                TRAIN WITH INTENT <br />
-                LOG EVERY SET.{" "}
+              <p className="text-4xl md:text-4xl font-black uppercase leading-tight text-white">
+                TRAIN WITH INTENT.LOG <br />
+               EVERY SET.
               </p>
 
               <p className="text-gray-400 mt-6 leading-relaxed max-w-xl">

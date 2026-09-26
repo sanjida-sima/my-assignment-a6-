@@ -3,7 +3,8 @@
 'use client'
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from 'react';
+
+import Image from "next/image";
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -34,7 +35,7 @@ const Navbar = () => {
     </div>
     <div>
      <Link href='/' className="flex items-center grap-3">
-     <img src='/logo.png'alt="Fitlogo"className="w-5 h-5"  />
+     <Image src='/logo.png'alt="Fitlogo"className="w-5 h-5"  />
      <span className="text-xl font-bold text-white">FITLOG</span>
      </Link>
     </div>
