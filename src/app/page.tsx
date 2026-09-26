@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react"
 import type { Workout } from "@/types/workout"
-import WorkoutCard
-from "@/components/workout/WorkoutCard"
+import WorkoutCard from "@/components/workout/WorkoutCard"
 import Hero from '@/components/home/Hero'
 
 
@@ -45,7 +44,7 @@ return (
   <main>
     <Hero />
     <section id="library" className="max-w-7xl mx-auto px-5 py-16">
-    <h2 className="text-4xl font-white">THE LIBRARY</h2>
+    <h2 className="text-4xl text-white">THE LIBRARY</h2>
     <p className="text-gray-500 mt-2">Twelve lifts covering every major muscle group.</p>
 
     {loading ? (
