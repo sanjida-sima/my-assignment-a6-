@@ -35,5 +35,5 @@ Save favorite workouts for later and access them from the Saved section.
 ### 5. Responsive Design
 The website is fully responsive and works smoothly on mobile, tablet, 
 and desktop devices.
-
+diploy link: https://my-assignment-a6.vercel.app/
 
