@@ -9,7 +9,7 @@ import {
 } from "react";
 
 import { Workout } from "../../types/workout";
-// import workout from "@/app/workout/page";
+
 
 interface FitlogContextType {
   plan: Workout[];
@@ -17,7 +17,7 @@ interface FitlogContextType {
 
   addToPlan: (workout: Workout) => void;
 
-  RemoveFromPlan: (id: number) => void;
+  removeFromPlan: (id: number) => void;
 
   saveWorkout: (workout: Workout) => void;
   removeFromSaved: (id: number) => void;
@@ -28,7 +28,7 @@ interface FitlogContextType {
 
 const FitlogContext = createContext<FitlogContextType | undefined>(undefined);
 
-export function Provider({ children }: { children: ReactNode }) {
+const FitlogProvider = ({ children }: { children: ReactNode })=> {
   const [plan, setPlan] = useState<Workout[]>([]);
   const [saved, setSaved] = useState<Workout[]>([]);
 
@@ -96,11 +96,23 @@ export function Provider({ children }: { children: ReactNode }) {
 
         const removeFromSaved = (id:number) =>{
             setSaved((prev) => prev.filter ((item) =>item.id !==id))
+            }
+
+
+        const isInPlan = (id : number) => {
+            return plan.some((item) => item.id === id);
+        };
+
+        const isSaved = (id : number ) => {
+            return saved.some((item) => item.id === id)
         }
+        
 
         return(
             <FitlogContext.Provider
-            value ={{plan, saved, addToPlan,removeFromSaved, removeFromSaved, saveWorkout}}
+           value={{
+            plan, saved, addToPlan, removeFromPlan ,saveWorkout,  removeFromSaved, isInPlan, isSaved
+           }}
             
             
             >
@@ -122,3 +134,4 @@ export function useFitlog(){
 
     return context;
 }
+export default FitlogProvider
