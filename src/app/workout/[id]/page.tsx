@@ -217,7 +217,7 @@ const id = params.id;
 
                         <ol className="mt-4 space-y-4 text-gray-400 text-sm list-decimal list-inside">
 
-                            {workout.instructions.map((instruction, index) =>(
+                            {workout.discription?.map((instruction :string, index :number) =>(
                                 <li key={index}>
                                     {instruction}
 
