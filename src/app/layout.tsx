@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import FitlogProvider  from '@/components/providerss/FitlogProvider'
+
 import Footer from "@/components/shared/Footer";
 
 const geistSans = Geist ({
@@ -37,11 +38,15 @@ export default function RootLayout(
       // data-theme="light"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen flex flex-col bg-[#0d0f12]">
          
          <FitlogProvider>
-        <Navbar/>
-        <div>{children}</div>
+        <div className="sticky top-0 z-50">
+          <Navbar/>
+        </div>
+        <main  className="flex-1">
+          {children}
+        </main>
 
 
 
