@@ -33,8 +33,10 @@ const FitlogProvider = ({ children }: { children: ReactNode })=> {
   const [saved, setSaved] = useState<Workout[]>([]);
 
   useEffect(() => {
+    const timer = setTimeout(() =>{
     const storedPlan = localStorage.getItem('fitlog-plan');
     const storedSaved = localStorage.getItem('fitlog-saved');
+
     if (storedPlan){
         setPlan(JSON.parse(storedPlan))
     }
@@ -43,7 +45,8 @@ const FitlogProvider = ({ children }: { children: ReactNode })=> {
         setSaved(JSON.parse(storedSaved))
     }
   },
-   []);
+   0);
+   return () => clearTimeout(timer);}, [])
 
    useEffect(
     () => {
