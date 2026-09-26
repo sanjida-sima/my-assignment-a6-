@@ -1,19 +1,19 @@
-
-import Image from "next/image";
-const Hero =() => {
-  return (
-    <> 
+import Image from 'next/image'
+const Hero = () => {
+  return(
+      <>
       {/* hero-section */}
+
         <section className="max-w-7xl mx-auto px-5 md:px-8 pt-10">
         <div className="bg-[#15181e] rounded-2xl overflow-hidden ">
           <div className="grid md:grid-cols-2 items-center">
             {/* left-side */}
             <div className="p-8 md:p-14">
-              <h1 className="text-[#c6ff00] font-bold text-sm md-5 ">
+              <h1 className="text-[#c6ff00] font-bold text-sm mb-5 ">
                 WORKOUT LIBRARY
               </h1>
 
-              <p className="text-4xl md:text-6xl font-black uppercase leading-tight">
+              <p className="text-4xl md:text-6xl font-black uppercase leading-tight text-white">
                 TRAIN WITH INTENT <br />
                 LOG EVERY SET.{" "}
               </p>
@@ -28,15 +28,19 @@ const Hero =() => {
             {/* banner */}
 
             <div className="p-5">
-              <Image src="/banner.png" alt="Fitlog Workout"  className="w-full"/>
+              <Image src="/banner.png" alt="Fitlog Workout" 
+              width= {700}
+              height ={500} 
+              className="w-full" />
             </div>
           </div>
         </div>
-      </section></>
+      </section>
+      </>
     
 
  
     
-  );
+);
 }
 export default Hero;
