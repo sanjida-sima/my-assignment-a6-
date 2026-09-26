@@ -1,4 +1,4 @@
-"use clienet";
+"use client";
 
 import {
   createContext,
@@ -9,17 +9,17 @@ import {
 } from "react";
 
 import { Workout } from "../../types/workout";
-import workout from "@/app/workout/page";
+// import workout from "@/app/workout/page";
 
 interface FitlogContextType {
   plan: Workout[];
   saved: Workout[];
 
-  addToPlan: (workout: workout) => void;
+  addToPlan: (workout: Workout) => void;
 
   RemoveFromPlan: (id: number) => void;
 
-  saveWorkout: (workout: workout) => void;
+  saveWorkout: (workout: Workout) => void;
   removeFromSaved: (id: number) => void;
 
   isInPlan: (id: number) => boolean;
@@ -33,8 +33,8 @@ export function Provider({ children }: { children: ReactNode }) {
   const [saved, setSaved] = useState<Workout[]>([]);
 
   useEffect(() => {
-    const storedPlan = localStorage.getItem('fitlog-plan')
-    const storedSaved = localStorage.getItem('fitlog-saved')
+    const storedPlan = localStorage.getItem('fitlog-plan');
+    const storedSaved = localStorage.getItem('fitlog-saved');
     if (storedPlan){
         setPlan(JSON.parse(storedPlan))
     }
